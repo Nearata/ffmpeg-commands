@@ -1,7 +1,5 @@
 # FFmpeg Commands
 
-> FFmpeg commands i use that forget about
-
 ## Convert video
 
 ```sh
