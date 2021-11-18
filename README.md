@@ -36,3 +36,9 @@ to re-encode incompatible streams
 ```sh
 ffmpeg -i <input.ext> -c copy -movflags +faststart <out.mp4>
 ```
+
+## Extract subtitles
+
+```sh
+ffmpeg -i <input.ext> -map 0:s:0 subs.ass
+```
