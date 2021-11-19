@@ -42,3 +42,9 @@ ffmpeg -i <input.ext> -c copy -movflags +faststart <out.mp4>
 ```sh
 ffmpeg -i <input.ext> -map 0:s:0 subs.ass
 ```
+
+## Add subtitles (burn)
+
+```sh
+ffmpeg -i <input> -vf subtitles=<filename> <output>
+```
