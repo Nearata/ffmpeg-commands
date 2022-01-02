@@ -48,3 +48,9 @@ ffmpeg -i <input.ext> -map 0:s:0 subs.ass
 ```sh
 ffmpeg -i <input> -vf subtitles=<filename> <output>
 ```
+
+## Extract JPEG from frame at a given time
+
+```sh
+ffmpeg -ss hh:mm:ss -i <input> -vframes 1 -q:v 2 screenshot.jpg
+```
