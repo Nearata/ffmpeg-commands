@@ -60,3 +60,9 @@ ffmpeg -ss hh:mm:ss -i <input> -vframes 1 -q:v 2 screenshot.jpg
 ```sh
 ffmpeg -i <input> -map 0:1 audio.ac3
 ```
+
+## Add audio to video
+
+```sh
+ffmpeg -i <input_video> -i <input_audio> -map 0 -map 1 -c copy -metadata:s:a:1 title="Eng" -metadata:s:a:1 language=eng <output>
+```
