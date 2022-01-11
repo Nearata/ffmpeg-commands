@@ -54,3 +54,9 @@ ffmpeg -i <input> -vf subtitles=<filename> <output>
 ```sh
 ffmpeg -ss hh:mm:ss -i <input> -vframes 1 -q:v 2 screenshot.jpg
 ```
+
+## Extract audio from video
+
+```sh
+ffmpeg -i <input> -map 0:1 audio.ac3
+```
