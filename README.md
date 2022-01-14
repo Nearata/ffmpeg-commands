@@ -49,6 +49,18 @@ ffmpeg -i <input.ext> -map 0:s:0 subs.ass
 ffmpeg -i <input> -vf subtitles=<filename> <output>
 ```
 
+## Add subtitles (soft)
+
+```sh
+ffmpeg -i <input_video> -i <input_subtitle> -map 0 -map 1 -metadata:s:s:INDEX title="<LANG>" -metadata:s:s:INDEX language=LANG -c copy <output>
+```
+
+to override
+
+```sh
+ffmpeg -i <input_video> -i <input_subtitle> -metadata:s:s:0 title="<LANG>" -metadata:s:s:0 language=LANG -c copy <output>
+```
+
 ## Extract JPEG from frame at a given time
 
 ```sh
