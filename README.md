@@ -78,3 +78,8 @@ ffmpeg -i <input> -map 0:1 audio.ac3
 ```sh
 ffmpeg -i <input_video> -i <input_audio> -map 0 -map 1 -c copy -metadata:s:a:1 title="Eng" -metadata:s:a:1 language=eng <output>
 ```
+
+## Cut audio from to
+```sh
+ffmpeg -ss <seek> -t <to_seconds> -i <input> <output>
+```
